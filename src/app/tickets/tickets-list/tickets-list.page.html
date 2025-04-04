@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Todos los tickets</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Todos los tickets</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>Asunto</ion-col>
+      <ion-col>Descripcion</ion-col>
+      <ion-col>Estado</ion-col>
+      <ion-col>Fecha</ion-col>
+      <ion-col>Asignado</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let ticket of tickets">
+      <ion-col>{{ticket.asunto}}</ion-col>
+      <ion-col>{{ticket.descripcion}}</ion-col>
+      <ion-col>{{ticket.estado}}</ion-col>
+      <ion-col>{{ticket.fecha}}</ion-col>
+      <ion-col>{{ticket.asignado}}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
